@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intbaie</object-name>
+    <object-name>intbaieG</object-name>
+    <object-name>intbaieD</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -17.177 </x-m>
+      <y-m>  -0.593 </y-m>
+      <z-m>  -2.613 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -17.177 </x-m>
+      <y-m>   0.593 </y-m>
+      <z-m>  -2.613 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Navigateur -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -15.627 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.486 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord
+  <model>
+    <path>Aircraft/Bell-P-59/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -3.010 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.022 </z-m>
+    </offsets>
+  </model> -->
+
+  <!-- Portes cargo arriere -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaie</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  9.280 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -4.973 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieG</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor> -80 </factor>
+    <axis>
+      <x1-m> 12.213 </x1-m>
+      <y1-m> -2.406 </y1-m>
+      <z1-m> -2.094 </z1-m>
+      <x2-m> 13.609 </x2-m>
+      <y2-m> -2.270 </y2-m>
+      <z2-m> -1.200 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieD</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor> 80 </factor>
+    <axis>
+      <x1-m> 12.213 </x1-m>
+      <y1-m>  2.406 </y1-m>
+      <z1-m> -2.094 </z1-m>
+      <x2-m> 13.609 </x2-m>
+      <y2-m>  2.270 </y2-m>
+      <z2-m> -1.200 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>
+
