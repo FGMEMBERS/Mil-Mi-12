@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Mil Mi 12       : 2010 BARANGER Emmanuel
+                       updated by Toan Phuc Nguyen Tri (31-07-2010)
 
      source          : http://en.wikipedia.org/wiki/Mil_Mi-12
 
@@ -36,7 +37,7 @@
          weightperblade="357"
          relbladecenter="0.53"
          dynamic="1"
-         rpm="225"
+         rpm="112"
          rellenflaphinge="0.03"
          delta3="0"
          delta="0.2"
@@ -91,7 +92,7 @@
          weightperblade="357"
          relbladecenter="0.53"
          dynamic="1"
-         rpm="225"
+         rpm="112"
          rellenflaphinge="0.03"
          delta3="0"
          delta="0.2"
@@ -133,7 +134,7 @@
          <control-input axis="controls/rotor/pitch" control="TILTPITCH" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
   </rotor>
 
-  <rotorgear max-power-engine="5500"
+  <rotorgear max-power-engine="6500"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
@@ -146,7 +147,7 @@
              <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
   </rotorgear>
 
-  <rotorgear max-power-engine="5500"
+  <rotorgear max-power-engine="6500"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
@@ -159,7 +160,7 @@
              <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
   </rotorgear>
 
-  <rotorgear max-power-engine="5500"
+  <rotorgear max-power-engine="6500"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
@@ -172,7 +173,7 @@
              <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
   </rotorgear>
 
-  <rotorgear max-power-engine="5500"
+  <rotorgear max-power-engine="6500"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
