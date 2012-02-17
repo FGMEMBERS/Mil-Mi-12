@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <airplane mass="12000">
 
 	<approach speed="40" aoa="16">
@@ -7,9 +9,6 @@
 	<cruise speed="84" alt="0">
 		<control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
 	</cruise>
-
-
-
 
 <rotor name="main" 
        x="2.508" y="0.014" z="1.345" 
@@ -48,6 +47,8 @@
        <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE" split="true"/>
        <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+
+       <control-output control="CYCLICELE" prop="/surface-positions/elevator-pos-norm"/>
 </rotor>
 
 <rotor name="tail" 
@@ -66,6 +67,8 @@
        rotor-correction-factor="0.9">
        <control-input axis="/controls/flight/rudder" control="COLLECTIVE" invert="true" src0="-1.0" src1="1.0" dst0="-1.0" dst1="1.0"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.1" src1="1.0" dst0=".0007" dst1="-.00055"/>
+
+       <control-output control="COLLECTIVE" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
 </rotor>
 
 

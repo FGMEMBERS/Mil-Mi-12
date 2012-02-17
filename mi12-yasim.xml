@@ -77,6 +77,8 @@
          <control-input axis="controls/flight/elevator" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="0.02" dst1="-0.03"/>
          <control-input axis="controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="-0.0" src1="1.0" dst0="0.12" dst1="0.01"/>
          <control-input axis="controls/rotor/pitch" control="TILTPITCH" src0="0.0" src1="1.0" dst0="0" dst1="-1.0"/>
+
+         <control-output control="CYCLICELE" prop="/surface-positions/elevator-pos-norm"/>
   </rotor>
 
   <rotor name="main2"
@@ -132,6 +134,8 @@
          <control-input axis="controls/flight/elevator" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-0.03" dst1="0.02"/>
          <control-input axis="controls/engines/engine[1]/throttle" control="COLLECTIVE" src0="-0.0" src1="1.0" dst0="0.12" dst1="0.01"/>
          <control-input axis="controls/rotor/pitch" control="TILTPITCH" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+
+         <control-output control="COLLECTIVE" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </rotor>
 
   <rotorgear max-power-engine="6500"

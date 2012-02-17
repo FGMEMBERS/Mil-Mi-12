@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -12,14 +12,6 @@
   <model>
     <name>Blade1</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeD1.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
-      <heading-deg>  0 </heading-deg>
-    </offsets>
   </model>
 
   <!-- Blades -->
@@ -27,11 +19,6 @@
     <name>Blade2</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeD2.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
       <heading-deg> 72 </heading-deg>
     </offsets>
   </model>
@@ -41,11 +28,6 @@
     <name>Blade3</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeD3.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 144 </heading-deg>
     </offsets>
   </model>
@@ -55,11 +37,6 @@
     <name>Blade4</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeD4.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 216 </heading-deg>
     </offsets>
   </model>
@@ -69,11 +46,6 @@
     <name>Blade5</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeD5.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 288 </heading-deg>
     </offsets>
   </model>
@@ -125,12 +97,10 @@
     <type>rotate</type>
     <object-name>rotorcomplet</object-name>
     <property>rotors/main/blade[0]/position-deg</property>
+<!--
+    <property>rotors/main/blade[1]/position-deg</property>
+-->
     <factor>-1</factor>
-    <center>
-       <x-m> 0 </x-m>
-       <y-m> 0 </y-m>
-       <z-m> 0 </z-m>
-    </center>
     <axis>
       <x>  0 </x>
       <y>  0 </y>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -12,14 +12,6 @@
   <model>
     <name>Blade1</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG1.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
-      <heading-deg> 20 </heading-deg>
-    </offsets>
   </model>
 
   <!-- Blades -->
@@ -27,11 +19,6 @@
     <name>Blade2</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG2.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
       <heading-deg> 92 </heading-deg>
     </offsets>
   </model>
@@ -41,11 +28,6 @@
     <name>Blade3</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG3.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 164 </heading-deg>
     </offsets>
   </model>
@@ -55,11 +37,6 @@
     <name>Blade4</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG4.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 236 </heading-deg>
     </offsets>
   </model>
@@ -69,11 +46,6 @@
     <name>Blade5</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG5.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
       <heading-deg> 308 </heading-deg>
     </offsets>
   </model>
@@ -126,11 +98,6 @@
     <object-name>rotorcomplet</object-name>
     <property>rotors/main/blade[0]/position-deg</property>
     <factor>1</factor>
-    <center>
-       <x-m> 0 </x-m>
-       <y-m> 0 </y-m>
-       <z-m> 0 </z-m>
-    </center>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
