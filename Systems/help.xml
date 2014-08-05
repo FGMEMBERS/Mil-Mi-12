@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Mil Mi 12- background and help</title>
+  <line>________________________________</line>
+  <key>
+    <name>N</name>
+    <desc>Toogle rotor brake</desc>
+  </key>
+  <key>
+    <name>n</name>
+    <desc>Apply rotor brake</desc>
+  </key>
+  <key>
+    <name>{</name>
+    <desc>Shutdown Engines</desc>
+  </key>
+  <key>
+    <name>}</name>
+    <desc>Start Engines</desc>
+  </key>
+  
+</PropertyList>

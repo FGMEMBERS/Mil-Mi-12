@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -11,23 +11,18 @@
     <object-name>intbaie</object-name>
     <object-name>intbaieG</object-name>
     <object-name>intbaieD</object-name>
-
+    <object-name>cloisons</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-12/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/Mil-Mi-12/Models/Pilot/pilot.xml</path>
@@ -58,21 +53,113 @@
     </offsets>
   </model>
 
-  <!-- Tableau de bord
+  <!-- Seats -->
   <model>
-    <path>Aircraft/Bell-P-59/Models/Interior/Panel/panel.xml</path>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
     <offsets>
-      <x-m> -3.010 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.022 </z-m>
+      <x-m> -15.52 </x-m>
+      <y-m>   0.00 </y-m>
+      <z-m>  -0.45 </z-m>
     </offsets>
-  </model> -->
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -14.28 </x-m>
+      <y-m>  -1.10 </y-m>
+      <z-m>  -0.45 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -13.98 </x-m>
+      <y-m>   1.10 </y-m>
+      <z-m>  -0.45 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -17.04 </x-m>
+      <y-m>  -0.60 </y-m>
+      <z-m>  -2.63 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -17.04 </x-m>
+      <y-m>   0.60 </y-m>
+      <z-m>  -2.63 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -15.94 </x-m>
+      <y-m>  -1.10 </y-m>
+      <z-m>  -2.63 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/PilotSeat/seat.xml</path>
+    <offsets>
+      <x-m> -15.74 </x-m>
+      <y-m>   1.20 </y-m>
+      <z-m>  -2.63 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Tableau de bord bas -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -17.7349 </x-m>
+      <y-m>   0.0000 </y-m>
+      <z-m>  -2.5725 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord haut -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel2/panel2.xml</path>
+    <offsets>
+      <x-m> -16.33385 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -0.40132 </z-m>
+    </offsets>
+  </model>
 
   <!-- Portes cargo arriere -->
   <animation>
+    <type>pick</type>
+    <object-name>intbaie</object-name>
+    <object-name>intbaieG</object-name>
+    <object-name>intbaieD</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>intbaie</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 30 </factor>
     <center>
       <x-m>  9.280 </x-m>
@@ -89,7 +176,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieG</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> -80 </factor>
     <axis>
       <x1-m> 12.213 </x1-m>
@@ -104,7 +191,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieD</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 80 </factor>
     <axis>
       <x1-m> 12.213 </x1-m>
@@ -117,4 +204,3 @@
   </animation>
 
 </PropertyList>
-

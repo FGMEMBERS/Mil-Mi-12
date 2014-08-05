@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>mainrotor.ac</path>
 
   <animation>
-    <object-name>axe</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
   </animation>
 
   <!-- Blades -->
@@ -19,7 +22,7 @@
     <name>Blade2</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG2.xml</path>
     <offsets>
-      <heading-deg> 92 </heading-deg>
+      <heading-deg> 72 </heading-deg>
     </offsets>
   </model>
 
@@ -28,7 +31,7 @@
     <name>Blade3</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG3.xml</path>
     <offsets>
-      <heading-deg> 164 </heading-deg>
+      <heading-deg> 144 </heading-deg>
     </offsets>
   </model>
 
@@ -37,7 +40,7 @@
     <name>Blade4</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG4.xml</path>
     <offsets>
-      <heading-deg> 236 </heading-deg>
+      <heading-deg> 216 </heading-deg>
     </offsets>
   </model>
 
@@ -46,13 +49,16 @@
     <name>Blade5</name>
     <path>Aircraft/Mil-Mi-12/Models/MainRotor/bladeG5.xml</path>
     <offsets>
-      <heading-deg> 308 </heading-deg>
+      <heading-deg> 288 </heading-deg>
     </offsets>
   </model>
 
   <animation>
     <name>rotorcomplet</name>
-    <object-name>axe</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
     <object-name>Blade1</object-name>
     <object-name>Blade2</object-name>
     <object-name>Blade3</object-name>
@@ -97,7 +103,7 @@
     <type>rotate</type>
     <object-name>rotorcomplet</object-name>
     <property>rotors/main/blade[0]/position-deg</property>
-    <factor>1</factor>
+    <factor> 1 </factor>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
@@ -106,4 +112,3 @@
   </animation>
 
 </PropertyList>
-

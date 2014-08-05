@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>mainrotor.ac</path>
 
   <animation>
-    <object-name>axe</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
   </animation>
 
   <!-- Blades -->
@@ -52,7 +55,10 @@
 
   <animation>
     <name>rotorcomplet</name>
-    <object-name>axe</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
     <object-name>Blade1</object-name>
     <object-name>Blade2</object-name>
     <object-name>Blade3</object-name>
@@ -100,7 +106,7 @@
 <!--
     <property>rotors/main/blade[1]/position-deg</property>
 -->
-    <factor>-1</factor>
+    <factor> -1 </factor>
     <axis>
       <x>  0 </x>
       <y>  0 </y>
@@ -109,4 +115,3 @@
   </animation>
 
 </PropertyList>
-

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Source : http://cdn-www.airliners.net/aviation-photos/photos/6/8/6/1295686.jpg -->
+  <path>panel2.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel2</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel2/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.549 </y-m>
+      <z-m>  0.007 </z-m>
+    </offsets>
+  </model> -->
+  
+</PropertyList>

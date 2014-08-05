@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    #############################################################################
+    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
+    #             2d & 3d instruments, animations, systems and over.            #
+    #             yurik@megasignal.com                                          #
+    #                                                                           #
+    # Updated by Helijah August 2013 / August 2014                              #
+    #############################################################################
+-->
+<PropertyList>
+  
+  <path>asi.ac</path>
+  
+  <animation>
+    <object-name>fond</object-name>
+
+    <object-name>face</object-name>
+    <object-name>index</object-name>
+    <object-name>flag</object-name>
+    <object-name>needle</object-name>
+    <object-name>lamp</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-12/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>index</object-name>
+    <object-name>flag</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <!--Warning lamp-->
+  <animation>
+    <type>material</type>
+    <object-name>lamp</object-name>
+    <emission>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0.0</dep></entry>
+      <entry><ind>  50 </ind><dep>  75.0</dep></entry>
+      <entry><ind>  60 </ind><dep>  91.5</dep></entry>
+      <entry><ind>  80 </ind><dep> 123.0</dep></entry>
+      <entry><ind> 100 </ind><dep> 155.0</dep></entry>
+      <entry><ind> 200 </ind><dep> 179.0</dep></entry>
+      <entry><ind> 300 </ind><dep> 203.0</dep></entry>
+      <entry><ind> 400 </ind><dep> 226.0</dep></entry>
+      <entry><ind> 500 </ind><dep> 251.0</dep></entry>
+      <entry><ind> 700 </ind><dep> 300.0</dep></entry>
+      <entry><ind> 800 </ind><dep> 325.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+<!--
+  <animation>
+    <type>rotate</type>
+    <object-name>index</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0.0</dep></entry>
+      <entry><ind>  50 </ind><dep>  75.0</dep></entry>
+      <entry><ind>  60 </ind><dep>  91.5</dep></entry>
+      <entry><ind>  80 </ind><dep> 123.0</dep></entry>
+      <entry><ind> 100 </ind><dep> 155.0</dep></entry>
+      <entry><ind> 200 </ind><dep> 179.0</dep></entry>
+      <entry><ind> 300 </ind><dep> 203.0</dep></entry>
+      <entry><ind> 400 </ind><dep> 226.0</dep></entry>
+      <entry><ind> 500 </ind><dep> 251.0</dep></entry>
+      <entry><ind> 700 </ind><dep> 300.0</dep></entry>
+      <entry><ind> 800 </ind><dep> 325.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+-->
+  <!--Blank-->
+  <animation>
+    <type>select</type>
+    <object-name>flag</object-name>
+    <condition>
+      <property>instrumentation/airspeed-indicator/blank</property>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>lamp</object-name>
+    <condition>
+      <property>tu154/instrumentation/rv-5m[0]/warn</property>
+    </condition>
+  </animation>
+  
+</PropertyList>

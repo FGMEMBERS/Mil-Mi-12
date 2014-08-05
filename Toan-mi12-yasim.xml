@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Mil Mi 12       : 2010 BARANGER Emmanuel
                        updated by Toan Phuc Nguyen Tri (31-07-2010)
@@ -12,8 +12,8 @@
      Engines         : 4 Soloviev D-25VF (5500 hp each)
      Maximum speed   : 260 km/h  ( 140 kt )
      Cruise speed    : 240 km/h  ( 130 kt )
+     version="YASIM_VERSION_CURRENT">
 -->
-
 <airplane mass="152340">
 
   <approach speed="40" aoa="16">
@@ -28,7 +28,7 @@
          x="1.581" y="16.436" z="3.732" 
          nx="0" ny="0" nz="1"
          fx="1" fy="0" fz="0"
-         ccw="0"
+         ccw="1"
          maxcollective="100" mincollective="-100"
          mincyclicele="-100" maxcyclicele="100"
          mincyclicail="-100" maxcyclicail="100"
@@ -77,15 +77,13 @@
          <control-input axis="controls/flight/elevator" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="0.02" dst1="-0.03"/>
          <control-input axis="controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="-0.0" src1="1.0" dst0="0.12" dst1="0.01"/>
          <control-input axis="controls/rotor/pitch" control="TILTPITCH" src0="0.0" src1="1.0" dst0="0" dst1="-1.0"/>
-
-         <control-output control="CYCLICELE" prop="/surface-positions/elevator-pos-norm"/>
   </rotor>
 
   <rotor name="main2"
          x="1.581" y="-16.436" z="3.732" 
          nx="0" ny="0" nz="1"
          fx="1" fy="0" fz="0"
-         ccw="1"
+         ccw="0"
          maxcollective="100" mincollective="-100"
          mincyclicele="-100" maxcyclicele="100"
          mincyclicail="-100" maxcyclicail="100"
@@ -134,11 +132,9 @@
          <control-input axis="controls/flight/elevator" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-0.03" dst1="0.02"/>
          <control-input axis="controls/engines/engine[1]/throttle" control="COLLECTIVE" src0="-0.0" src1="1.0" dst0="0.12" dst1="0.01"/>
          <control-input axis="controls/rotor/pitch" control="TILTPITCH" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
-
-         <control-output control="COLLECTIVE" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </rotor>
 
-  <rotorgear max-power-engine="6500"
+  <rotorgear max-power-engine="26000"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
@@ -151,46 +147,41 @@
              <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
   </rotorgear>
 
-  <rotorgear max-power-engine="6500"
-             max-power-rotor-brake="185"
-             rotorgear-friction="3.7"
-             engine-prop-factor="0.05"
-             engine-accel-limit="4"
-             yasimdragfactor="23"
-             yasimliftfactor="385">
-             <control-input axis="/controls/engines/engine[1]/magnetos" control="ROTORGEARENGINEON"/>
-             <control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
-             <control-input axis="/controls/rotor/reltarget" control="ROTORRELTARGET" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-             <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-  </rotorgear>
 
-  <rotorgear max-power-engine="6500"
-             max-power-rotor-brake="185"
-             rotorgear-friction="3.7"
-             engine-prop-factor="0.05"
-             engine-accel-limit="4"
-             yasimdragfactor="23"
-             yasimliftfactor="385">
-             <control-input axis="/controls/engines/engine[2]/magnetos" control="ROTORGEARENGINEON"/>
-             <control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
-             <control-input axis="/controls/rotor/reltarget" control="ROTORRELTARGET" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-             <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-  </rotorgear>
 
-  <rotorgear max-power-engine="6500"
-             max-power-rotor-brake="185"
-             rotorgear-friction="3.7"
-             engine-prop-factor="0.05"
-             engine-accel-limit="4"
-             yasimdragfactor="23"
-             yasimliftfactor="385">
-             <control-input axis="/controls/engines/engine[3]/magnetos" control="ROTORGEARENGINEON"/>
-             <control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
-             <control-input axis="/controls/rotor/reltarget" control="ROTORRELTARGET" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-             <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE" src0="0.0" src1="2.0" dst0="0.0" dst1="2.0"/>
-  </rotorgear>
+  <jet x="1.5" y="0.8" z="4.5" 
+       mass="6000" 
+       thrust="1"
+       spool-time="8" 
+       tsfc="0.371"
+       n1-idle="56"
+       n1-max="102"
+       n2-idle="20"
+       n2-max="100"
+       epr="6.42"
+       egt="1223"
+       rotate="0">
+       <actionpt x="1.5" y="0.8" z="4.5"/>
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE" src0="0.0" src1="1.0" dst0="1.0" dst1="1.0"/>
+   </jet>
+   
+   <jet x="1.5" y="-0.8" z="4.5"
+        mass="6000"
+        thrust="1"
+        spool-time="8"
+        tsfc="0.371"
+        n1-idle="56"
+        n1-max="102"
+        n2-idle="20"
+        n2-max="100"
+        epr="6.42"
+        egt="1223"
+        rotate="0">
+        <actionpt x="1.5" y="-0.8" z="4.5"/>
+        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE" src0="0.0" src1="1.0" dst0="1.0" dst1="1.0"/>
+   </jet>
 
-  <cockpit x="7.589" y="0.694" z="-0.570"/>
+  <cockpit x="18.0" y="0.694" z="-0.570"/>
 
   <!-- Fuse -->
   <fuselage ax="18.475" ay="0" az="-2.734" bx=" 14.777" by="0" bz="-1.936" width="4.810" taper="0.5" midpoint="1"/>
@@ -200,9 +191,11 @@
   <wing x="1.572" y="2.325" z="0.458"
         chord="2.068" 
         length="12.850"
+        incidence="14"
+        twist="-7"
         taper="2.8"
         sweep="2"
-        dihedral="9">
+        dihedral="8">
    </wing>
 
   <hstab x="-15.308" y="0" z="-0.116" 
@@ -254,7 +247,7 @@
         compression="0.2" 
         retract-time="5" 
         spring="1.0" 
-        damp="1.5" 
+        damp="1.55" 
         sfric="1.2" 
         dfric="1.2">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
@@ -266,7 +259,7 @@
         compression="0.2" 
         retract-time="5" 
         spring="1.0" 
-        damp="1.5" 
+        damp="1.55" 
         sfric="1.2" 
         dfric="1.2">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
