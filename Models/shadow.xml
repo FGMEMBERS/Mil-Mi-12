@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>shadow.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+
+    <!-- Objets transparents -->
+    <object-name>shadow</object-name>
+    <object-name>shadowrotorL</object-name>
+    <object-name>shadowrotorR</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>shadow</object-name>
+    <object-name>shadowrotorL</object-name>
+    <object-name>shadowrotorR</object-name>
+  </animation>
+
+  <animation>
+    <name>OmbreTotale</name>
+    <object-name>shadow</object-name>
+    <object-name>shadowrotorL</object-name>
+    <object-name>shadowrotorR</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>OmbreTotale</object-name>
+    <condition>
+      <and>
+        <not><property>sim/freeze/replay-state</property></not>
+        <not><property>sim/rendering/shadows/enabled</property></not>
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Une ombre pour OSG en attendant mieux (Rembrandt par exemple) ;) -->
+  <!-- pitch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>OmbreTotale</object-name>
+    <property>orientation/pitch-deg</property>
+    <factor> -1 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- roll -->
+  <animation>
+    <type>rotate</type>
+    <object-name>OmbreTotale</object-name>
+    <property>orientation/roll-deg</property>
+    <factor> 1 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Translate to ground level -->
+  <animation>
+    <type>translate</type>
+    <object-name>OmbreTotale</object-name>
+    <property>sim/multiplay/generic/float[2]</property>
+    <factor> -1 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>shadowrotorL</object-name>
+    <property>rotors/main/blade[0]/position-deg</property>
+    <center>
+      <x-m>  -1.581 </x-m>
+      <y-m> -16.436 </y-m>
+      <z-m>  -5.828 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>shadowrotorR</object-name>
+    <property>rotors/main/blade[0]/position-deg</property>
+<!--
+    <property>rotors/main/blade[1]/position-deg</property>
+-->
+    <center>
+      <x-m> -1.581 </x-m>
+      <y-m> 16.436 </y-m>
+      <z-m> -5.828 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

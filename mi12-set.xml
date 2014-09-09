@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="mi12-base.xml">
+
+  <sim>
+
+    <description>Mil Mi 12 (Yasim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <status>alpha</status>
+    <license>GPL v2</license>
+    <flight-model>yasim</flight-model>
+    <aero>mi24-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+    
+  </sim>
+      
+</PropertyList>

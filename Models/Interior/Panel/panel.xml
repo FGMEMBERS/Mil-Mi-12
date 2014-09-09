@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Source : http://commons.wikimedia.org/wiki/File:Mil_Mi-12_Cockpit.jpg -->
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panel2</object-name>
+    <object-name>panel3</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.549 </y-m>
+      <z-m>  0.007 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.641 </y-m>
+      <z-m> 0.007 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.657 </y-m>
+      <z-m>  0.152 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.723 </y-m>
+      <z-m>  0.068 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.440 </y-m>
+      <z-m> -0.009 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.770 </y-m>
+      <z-m>  0.042 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.557 </y-m>
+      <z-m> -0.136 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.638 </y-m>
+      <z-m> -0.136 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- DIVERS -->
+  <model>
+    <path>Aircraft/Mil-Mi-12/Models/Interior/Panel/Instruments/divers/divers.xml</path>
+    <offsets>
+      <x-m>  0.00683 </x-m>
+      <y-m> -0.00625 </y-m>
+      <z-m>  0.10307 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>

@@ -1,0 +1,70 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+OBJECT world
+kids 3
+OBJECT poly
+name "shadow"
+loc 0 0 -0
+data 6
+shadow
+texture "shadow.png"
+texrep 1 1
+crease 30.000001
+numvert 4
+18.44219 0.000001 -17.721964
+18.44219 -0.000001 17.721968
+-18.442194 -0.000001 17.721964
+-18.442184 0.000001 -17.72197
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 1 0.999999761581
+3 0.000000287004 1
+2 0 0.500000178814
+1 1 0.5
+kids 0
+OBJECT poly
+name "shadowrotorL"
+loc -1.581 0 16.436001
+data 12
+shadowrotorL
+texture "shadow.png"
+texrep 1 1
+crease 30.000001
+numvert 4
+17.099998 0.000001 -17.099995
+17.099998 -0.000001 17.099998
+-17.100002 -0.000001 17.099995
+-17.099993 0.000001 -17.1
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 0.5 0.000000119209
+3 0.000000283122 0
+2 0 0.499999761581
+1 0.5 0.5
+kids 0
+OBJECT poly
+name "shadowrotorR"
+loc -1.581 0 -16.436001
+data 12
+shadowrotorR
+texture "shadow.png"
+texrep 1 1
+crease 30.000001
+numvert 4
+17.099998 0.000001 -17.099995
+17.099998 -0.000001 17.099998
+-17.100002 -0.000001 17.099995
+-17.099993 0.000001 -17.100002
+numsurf 1
+SURF 0x10
+mat 0
+refs 4
+0 1 0.499999880791
+3 0.500000298023 0.5
+2 0.5 0.000000216402
+1 1 0
+kids 0

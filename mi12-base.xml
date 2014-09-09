@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>Mil Mi 12 (Yasim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <status>alpha</status>
+    <license>GPL v2</license>
+
+    <fuel-fraction>0.8</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Mil-Mi-12/mi12-splash.png</splash-texture>
+    </startup> 
+
+    <sound>
+      <path>Aircraft/Mil-Mi-12/Sounds/mi12-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Mil-Mi-12/Models/mi12.xml</path>
+      <mi12>
+        <state type="int">0</state>
+        <engine type="float">0</engine>
+        <rotor-step-deg type="float">-1</rotor-step-deg>
+        <is_inside_view type="int">1</is_inside_view>
+        <is_outside_view type="int">0</is_outside_view>
+      </mi12>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
+        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
+        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
+        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
+        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
+        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
+        <int n="6"    type="bool" alias="controls/smoke"> 0 </int>                  <!-- 6 smoke/bomb/torpedo -->
+        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/mi12-menu.xml"/>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+  </controls>
+
+  <instrumentation>
+    <gsdi>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+  <input>
+    <keyboard include="Systems/mi12-keyboard.xml"/>
+  </input>
+
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
+    </main>
+  </rotors>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Mil-Mi-12/Nasal/doors.nas</file>
+    </doors>
+    <mi12>
+      <file>Aircraft/Mil-Mi-12/Nasal/mi12.nas</file>
+      <file>Aircraft/Mil-Mi-12/Nasal/light.nas</file>
+      <file>Aircraft/Mil-Mi-12/Nasal/liveries.nas</file>
+    </mi12>
+  </nasal>
+
+</PropertyList>
